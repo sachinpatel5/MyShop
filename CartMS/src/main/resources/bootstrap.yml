@@ -1,0 +1,38 @@
+#server:
+#  port: 7001
+#
+#spring:
+#  application:
+#    name: user
+#  cloud:
+#    consul:
+#      host: localhost  # Specify Consul host
+#      port: 8500  # Specify Consul port
+#      discovery:
+#        instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}  # Generate unique instance IDs
+#      config:
+#        enabled: true
+#        prefixes: config  # Prefix for configuration keys in Consul KV store
+#        default-context: application  # Default application context
+#        data-key: data  # Key under which the configuration data is stored
+#        profile-separator: '::'  # Separator for profiles in Consul configuration keys
+#        format: YAML  # Format of configuration data stored in Consul (YAML, JSON, etc.)
+#
+#        
+#management:
+#  endpoint:
+#    metrics:
+#      enabled: true
+#    prometheus:
+#      enabled: true
+#  endpoints:
+#    web:
+#      exposure:
+#        exclude: all
+#  prometheus:
+#    metrics:
+#      export:
+#        enabled: true
+#      
+#        
+#
